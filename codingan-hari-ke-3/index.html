@@ -1,23 +1,23 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF to QR Code</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Upload PDF dan Dapatkan QR Code</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" id="pdfInput" accept=".pdf" required>
-            <button type="submit">Unggah PDF</button>
+        <h1>Masukkan Link PDF Anda</h1>
+        <form id="urlForm">
+            <input type="url" id="pdfUrl" placeholder="Tempel link Google Drive PDF Anda di sini" required>
+            <button type="submit">Buat QR Code</button>
         </form>
         <div id="qrCodeContainer" style="display: none;">
             <h2>QR Code Anda</h2>
-            <div id="qrCode"></div>
-            <p>Scan QR code untuk mengakses PDF Anda</p>
+            <canvas id="qrCode"></canvas>
+            <p>Scan QR untuk melihat PDF Anda</p>
         </div>
     </div>
 
